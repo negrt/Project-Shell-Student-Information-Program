@@ -1,0 +1,80 @@
+#======================================================
+# Script Name:  .functions
+# By:           Timothy Negron
+# Date:         5/11/2018
+# Purpose:      Necessary functions to aid in running
+#               the menuprogram. This file is opened
+#               when the viewrecords script is running.
+#
+#======================================================
+
+sort_lname()
+{
+clear
+        sort -k 2 -t: student_data -o sorted_lname;
+        tput cup 2 20; echo "Student Program Information"
+        tput cup 3 20; echo "============================="
+        echo
+        tput cup 5 0; echo "Student_ID  Last_Name       First_Name      Program                 Credits"
+        echo
+        awk -F: ' { printf "%-11s %-15s %-15s %-23s %-s \n", $1, $2, $3, $4, $5 } ' sorted_lname
+        tput cup 25 0; echo "The total number of records: "
+        tput cup 25 30; grep -c "^" sorted_lname
+        echo
+        echo
+        echo "Press ENTER to continue"
+        read continue
+}
+
+sort_program()
+{
+clear
+        sort -k 4 -t: student_data -o sorted_program;
+        tput cup 2 20; echo "Student Program Information"
+        tput cup 3 20; echo "============================="
+        echo
+        tput cup 5 0; echo "Student_ID  Last_Name       First_Name      Program                 Credits"
+        echo
+        awk -F: ' { printf "%-11s %-15s %-15s %-23s %-s \n", $1, $2, $3, $4, $5 } ' sorted_program
+        echo
+        echo
+        echo
+        tput cup 25 0; echo "The total number of records: "
+        tput cup 25 30; grep -c "^" sorted_lname
+        echo
+        echo
+        echo "Press ENTER to continue"
+        read continue
+
+}
+
+sort_credits()
+{
+clear
+        sort -k 5 -t: -g student_data -o sorted_credits;
+        tput cup 2 20; echo "Student Program Information"
+        tput cup 3 20; echo "============================="
+        echo
+        tput cup 5 0; echo "Student_ID  Last_Name       First_Name      Program                 Credits"
+        echo
+        awk -F: ' { printf "%-11s %-15s %-15s %-23s %-s \n", $1, $2, $3, $4, $5 } ' sorted_credits
+        tput cup 25 0; echo "The total number of records: "
+        tput cup 25 30; grep -c "^" sorted_lname
+        echo
+        echo
+        echo "Press ENTER to continue"
+        read continue
+
+}
+
+sort_id()
+{
+clear
+        sort -k 1 -t: student_data -o sorted_id;
+        tput cup 2 20; echo "Student Program Information"
+        tput cup 3 20; echo "============================="
+        echo
+        tput cup 5 0; echo "Student_ID  Last_Name       First_Name      Program                 Credits"
+        echo
+        awk -F: ' { printf "%-11s %-15s %-15s %-23s %-s \n", $1, $2, $3, $4, $5 } ' sorted_id
+        tput cup 25 0; echo "The total n
