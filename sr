@@ -1,0 +1,22 @@
+#!/bin/bash
+#================================================================
+# Script Name:	sr
+# By:		Timothy Negron
+# Date:		05/11/2018
+# Purpose:	The user has the option to find a record based ony
+#		a pattern. 
+#
+#=================================================================
+
+data=/home/students/negrt/project/student_data #variable created to store file path for grep command search
+
+clear
+		#Prompt user
+	tput cup 2 4; echo "Enter pattern to search for: "
+	tput cup 2 33; read pattern
+	echo
+		#search (grep) and display (tr) record, using pipe command
+	grep $pattern $data | tr ':' ' '
+
+	tput cup 15 4; echo "Press ENTER to continue..."
+	tput cup 15 30; read enter

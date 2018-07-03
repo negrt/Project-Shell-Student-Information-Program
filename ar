@@ -1,0 +1,70 @@
+#!/bin/bash
+#================================================================
+# Script Name:	ar
+# By:		Timothy Negron
+# Date:		05/11/2018
+# Purpose:	The user is presented with a menu and has the
+#		option to quite or enter a new record. The record
+#		is store in the student_data file via data
+#		variable.
+#
+#=================================================================
+
+data=/home/students/negrt/project/student_data #variable created to store file path for grep and insertion
+
+while [ 0 ]
+do
+	clear
+		#Display menu
+	tput cup 2 4; echo "Add New Student Record"
+	tput cup 3 4; echo "======================"
+	tput cup 5 4; echo "Student ID	:"
+	tput cup 6 4; echo "Last Name	:"
+	tput cup 7 4; echo "First Name	:"
+	tput cup 8 4; echo "Program	:"
+	tput cup 9 4; echo "Credits	:"
+	tput cup 12 4; echo "Add Another? (y)es or (q)uit:"
+	tput cup 5 18; read id
+	if [ "$id" = "q" ]
+		then
+		clear; exit #If user selects quit, script will end.
+	fi
+		#Check to see if the ID number already exist
+	while grep "$id" $data > ~/tmp/temp
+	do
+		tput cup 20 4; echo "This ID is already in the file and belong to.."
+		tput cup 22 4; tr ':' ' ' < ~/tmp/temp
+		tput cup 24 4; echo "Press ENTER to continue..."
+		read enter
+		tput cup 5 18; echo "                          " #Override previous record with blank space
+		tput cup 5 18; read id
+		if [ "$id" = "q" ]
+		then
+			clear; exit #User option to exit program again
+		fi
+	done
+		#If record does not exist, user will be able to continue to enter the record
+	tput cup 6 18; read lname
+        tput cup 7 18; read fname
+        tput cup 8 18; read program
+        tput cup 9 18; read credits
+  	
+		#Check it last name is blank
+	if [ $lname > "           " ]
+	then		
+        	#Insert data to file
+        	echo "$id:$lname:$fname:$program:$credits" >> $data
+        	tput cup 12 45; read another
+	else
+		#If the last name is blank, user will not be allowed to enter the record.
+        	tput cup 17 4; echo "The last name cannot be blank for the new record to be written into the data file."
+                tput cup 18 4; echo "Press Enter to continue... or (q)uit..."
+                tput cup 18 55; read another
+	fi
+	
+	if [ $another = "q" ]
+	then
+		clear; exit;
+	fi
+done
+

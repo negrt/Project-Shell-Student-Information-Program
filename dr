@@ -1,0 +1,42 @@
+#!/bin/bash
+#================================================================
+# Script Name:	dr
+# By:		Timothy Negron
+# Date:		05/11/2018
+# Purpose:	The user has the option to find a record based ony
+#		a pattern. If no record is found, a prompt will
+#		will appear indicating so. If a record is found,
+#		the user will be asked if they are certain they
+#		want to delete the file.
+#
+#=================================================================
+
+
+data=/home/students/negrt/project/student_data #variable create to store file path for sed command deletion
+
+clear
+		#User is prompt to select a patern
+	tput cup 2 4; echo "Enter pattern to delete: "
+	tput cup 2 29; read pattern
+		#True or False store into variable to verify if record exist
+	grep $pattern $data > ~/tmp/temp
+	num=$?
+		#If record exist, prompt show user record that will be deleted
+	if [ "$num" = 0 ]
+	then
+		tput cup 4 4; grep $pattern $data | tr ':' ' '
+		tput cup 6 4; echo "Want to delete these records? (y)es or (n)o: "
+		tput cup 6 49; read choice	
+			if [ $choice = "y" ]
+			then
+				sed /$pattern/d $data > f
+				cp f $data
+				rm f
+			fi
+	else
+		#If record does not exist, prompt user no record found
+	tput cup 10 4; echo "No record found"
+	fi
+	
+	tput cup 20 4; echo "Press ENTER to continue..."
+	tput cup 20 32; read enter

@@ -1,0 +1,35 @@
+#!/bin/bash
+#================================================================
+# Script Name:	vr
+# By:		Timothy Negron
+# Date:		05/11/2018
+# Purpose:	To give the user the option to sort data by
+#		the last name, program, credits or ID #.r
+#
+#=================================================================
+
+. .functions #Open the function script
+
+clear
+		#Display the menu
+	tput cup 2 4; echo "Student Program Information"
+	tput cup 3 4; echo "==========================="
+	tput cup 6 4; echo "Sort by:"
+	tput cup 7 4; echo "	 L 	- Last Name"
+	tput cup 8 4; echo "	 P 	- Program"
+	tput cup 9 4; echo "	 C 	- Credits"
+	tput cup 10 4; echo "	 Any 	- ID"
+	tput cup 12 4; echo "Enter your choice: "
+	tput cup 12 23; read sortchoice
+			
+		#Depending on choice, a different function will run
+	case $sortchoice in
+		[L]) sort_lname
+		;;
+		[P]) sort_program
+		;;
+		[C]) sort_credits
+		;;
+		*) sort_id
+		;;
+	esac
