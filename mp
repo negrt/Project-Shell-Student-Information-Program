@@ -1,6 +1,6 @@
 #!/bin/bash
 #================================================================
-# Script Name:	mp
+# Script Name:	mp (Menu of Project)
 # By:		Timothy Negron
 # Date:		05/11/2018
 # Purpose:	To display a menu allowing the user to view
