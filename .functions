@@ -3,8 +3,9 @@
 # By:           Timothy Negron
 # Date:         5/11/2018
 # Purpose:      Necessary functions to aid in running
-#               the menuprogram. This file is opened
-#               when the viewrecords script is running.
+#               the menu of program script. This file
+#               is opened when the viewrecords script 
+#               is running.
 #
 #======================================================
 
