@@ -6,7 +6,7 @@ A Unix/Linux desktop application that allows you to manipulate student informati
 * How to run a file seperate from main file
 * How to use tput cup to organize text displayed
 
-# How to use application
+# How to use this application
 Copy files to a unix/linux environment and execute mp file.
 
 # More
