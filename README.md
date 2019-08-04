@@ -1,2 +1,10 @@
-# Project_Shell_Student_Information_Program
-In this porject, the user will be able to do the following regarding student information: add records (see file: ar), view records (see file: vr), delete records (see file: dr), search for records (see file: sr). This project was created in a Linux environment while remotely accessing the machine it was created on via the Putty software application on a Window 10 Desktop computer from home. I created this project when I was taking a course called UNIX operating systems at SUNY Farmingdale State College.
+# StudentRecords
+
+
+# What I learned
+* How to include a library of functions file
+* How to run a file seperate from main file
+* How to use tput cup to organize text displayed
+
+# More
+In this porject, the user will be able to do the following regarding student information: add records (see file: ar), view records (see file: vr), delete records (see file: dr), search for records (see file: sr). This project was created in a Linux environment while remotely accessing the Linux machine it was created on via the Putty software application on a Windows 10 Desktop computer from my home.
