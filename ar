@@ -49,7 +49,7 @@ do
         tput cup 8 18; read program
         tput cup 9 18; read credits
   	
-		#Check it last name is blank
+		#Check if last name is blank
 	if [ $lname > "           " ]
 	then		
         	#Insert data to file
