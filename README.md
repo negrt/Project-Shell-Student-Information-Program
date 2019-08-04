@@ -10,4 +10,4 @@ A Unix/Linux desktop application that allows you to manipulate student informati
 Copy files to a unix/linux environment and execute mp file.
 
 # More
-In this porject, the user will be able to do the following regarding student information: add records (see file: ar), view records (see file: vr), delete records (see file: dr), search for records (see file: sr). This project was created in a Linux environment while remotely accessing the Linux machine it was created on via the Putty software application on a Windows 10 Desktop computer from my home.
+In this porject, the user will be able to do the following regarding student information: add records (see file: ar), view records (see file: vr), delete records (see file: dr), search for records (see file: sr). This project was created in a Linux environment while remotely accessing the Linux machine it was created on via Putty software application on a Windows 10 Desktop computer from my home.
