@@ -2,9 +2,9 @@
 A Unix/Linux desktop application that allows you to manipulate student information.
 
 # What I learned
-* How to include a library of functions file
-* How to run a file seperate from main file
-* How to use tput cup to organize text displayed
+* How to include a script of functions 
+* How to run a script seperate from the main script
+* How to use tput cup to organize/position text on the console
 
 # How to use this application
 Copy files to a unix/linux environment and execute mp file.
