@@ -4,8 +4,8 @@
 # By:		Timothy Negron
 # Date:		05/11/2018
 # Purpose:	The user is presented with a menu and has the
-#		option to quite or enter a new record. The record
-#		is store in the student_data file via data
+#		option to quit or enter a new record. The record
+#		is stored in the student_data file via data
 #		variable.
 #
 #=================================================================
