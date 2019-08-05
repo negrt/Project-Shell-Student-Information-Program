@@ -1,4 +1,4 @@
-# StudentRecords
+# StudentRecordsTool
 A Unix/Linux desktop application that allows you to manipulate student information.
 
 # What I learned
