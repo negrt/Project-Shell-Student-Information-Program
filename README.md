@@ -8,7 +8,7 @@ A Unix/Linux desktop application that allows you to manipulate student informati
 
 # Note to self
 * Need to add record file
-* Need to add make file path that can function on any computer
+* Need to make a file path that can function on any computer
 
 # More
 In this porject, the user will be able to do the following regarding student information: add records (see file: ar), view records (see file: vr), delete records (see file: dr), search for records (see file: sr). This project was created in a Linux environment while remotely accessing the Linux machine it was created on via Putty software application on a Windows 10 Desktop computer from my home.
