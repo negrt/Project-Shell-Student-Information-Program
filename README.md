@@ -7,7 +7,7 @@ A Unix/Linux desktop application that allows you to manipulate student informati
 * How to use tput cup to organize/position text on the console
 
 # Notice
-* Need to add records
+* Need to add record file
 * Need to add make file path that can function on any computer
 
 # More
