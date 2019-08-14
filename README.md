@@ -6,7 +6,7 @@ A Unix/Linux desktop application that allows you to manipulate student informati
 * How to run a script seperate from the main script
 * How to use tput cup to organize/position text on the console
 
-# Notice
+# Note to self
 * Need to add record file
 * Need to add make file path that can function on any computer
 
